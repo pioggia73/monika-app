@@ -19,7 +19,9 @@ const Sidebar = () => {
           <ul className={`${isOpen ? "links" : ""}`}>
             {navLinks.map((link) => (
               <li key={link.id} className="link">
-                <Link to={link.url}>{link.text}</Link>
+                <Link to={link.url} onClick={toggleSidebar}>
+                  {link.text}
+                </Link>
               </li>
             ))}
           </ul>

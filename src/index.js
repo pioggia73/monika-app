@@ -4,12 +4,14 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { CoursesProvider } from "./context/CoursesContext";
-
+import { ProjectsProvider } from "./context/ProjectsContext";
 ReactDOM.render(
   <React.StrictMode>
-    <CoursesProvider>
-      <App />
-    </CoursesProvider>
+    <ProjectsProvider>
+      <CoursesProvider>
+        <App />
+      </CoursesProvider>
+    </ProjectsProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );
